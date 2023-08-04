@@ -1,3 +1,4 @@
+<div class="card">
 <%= form_with(model: tweet) do |form| %>
   <% if tweet.errors.any? %>
     <div style="color: red">
@@ -12,16 +13,17 @@
   <% end %>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.label :description, style: "display: block", class: "form-label" %>
+    <%= form.text_area :description, class: "form-control", placeholder: "¡¿Qué está pasando?!" %>
   </div>
 
   <div>
-    <%= form.label :userName, style: "display: block" %>
-    <%= form.text_field :userName %>
+    <%= form.label :userName, style: "display: block", class: "form-label" %>
+    <%= form.text_field :userName, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="my-1">
+    <%= form.submit "Publicar", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div>
