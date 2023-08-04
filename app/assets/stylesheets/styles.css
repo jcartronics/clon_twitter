@@ -46,3 +46,9 @@
     border: 1px solid #ccc;
     padding: 5px;
 }
+
+.paginador {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
