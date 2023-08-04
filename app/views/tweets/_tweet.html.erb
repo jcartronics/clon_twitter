@@ -3,7 +3,7 @@
   <%= image_tag "twitter-icon.png", class: "img-fluid rounded-circle" %>
 </div>
   <div class="tweet-content">
-    <p><%= tweet.userName %> <%= tweet.updated_at %></p>
+    <p><%= tweet.userName %> - <%= time_ago_in_words(tweet.updated_at) %></p>
     <p>
       <strong><%= tweet.description %></strong>
     </p>
