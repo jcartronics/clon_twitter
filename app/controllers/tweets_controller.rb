@@ -5,6 +5,11 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all.order(updated_at: :desc)
     @tweet = Tweet.new
+
+    if params[:buscar].present?
+      @tweets = Tweet.search_full_text(params[:buscar]).order(updated_at: :desc)
+    end
+    
     @pagy, @tweets = pagy(@tweets, items: 5)
   end
 
