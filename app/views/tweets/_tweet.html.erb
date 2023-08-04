@@ -1,12 +1,11 @@
-<div id="<%= dom_id tweet %>">
-  <p>
-    <strong>Description:</strong>
-    <%= tweet.description %>
-  </p>
-
-  <p>
-    <strong>Username:</strong>
-    <%= tweet.userName %>
-  </p>
-
+<div id="<%= dom_id tweet %>" class="card tweet p-2">
+<div class="profile-img">
+  <%= image_tag "twitter-icon.png", class: "img-fluid rounded-circle" %>
+</div>
+  <div class="tweet-content">
+    <p><%= tweet.userName %> <%= tweet.updated_at %></p>
+    <p>
+      <strong><%= tweet.description %></strong>
+    </p>
+  </div>
 </div>
