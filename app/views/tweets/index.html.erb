@@ -8,9 +8,9 @@
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
     <p>
-      <%= link_to "Show this tweet", tweet %>
+      <%= link_to "Ver", tweet, class: "btn btn-primary" %>
+      <%= link_to "Editar", edit_tweet_path(tweet), class: "btn btn-primary" %>
+      <%= link_to "Borrar", tweet, method: :delete, data: { confirm: "Deseas borrar este tweet?"}, class: "btn btn-danger" %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New tweet", new_tweet_path %>
